@@ -1,5 +1,8 @@
-import { combineReducers } from "redux";
-import todos from "./todos";
-import visibilityFilter from './visibilityFilter';
+import { combineReducers } from 'redux'
+import user from './user';
 
-export default combineReducers({ todos, visibilityFilter });
+const reducers = combineReducers({
+  user
+});
+
+export default reducers
