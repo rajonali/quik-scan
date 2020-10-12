@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { requestSignIn, signedIn } from '../redux/actions/user'
 import { auth } from '../firebase';
 import * as routes from '../redux/constants/routes';
+import {Form, Button, Jumbotron, Container} from 'react-bootstrap';
+
+
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -27,9 +30,10 @@ class SignIn extends React.Component {
       email === '';
 
     return (
-      <div>
-        <h1>SignIn</h1>
-        <form onSubmit={ async (e) => {
+      <Container>
+        <Jumbotron>
+        <h1>Sign-In</h1>
+        <Form onSubmit={ async (e) => {
           e.preventDefault();
 
           const {
@@ -57,31 +61,42 @@ class SignIn extends React.Component {
             });
           }
         }}>
-          <input
-            value={email}
+<Form.Group controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control value={email}
             onChange={event => this.setState({
               email: event.target.value
             })}
             type="text"
-            placeholder="Email Address"
-          />
-          <input
-            value={password}
+            placeholder="Email Address" />
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
+  <Form.Group controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control value={password}
             onChange={event => this.setState({
               password: event.target.value
             })}
             type="password"
-            placeholder="Password"
-          />
-          <button disabled={isInvalid} type="submit">
-            Sign In
-          </button>
-
+            placeholder="Password" />
+  </Form.Group>
+  <Button variant="primary" disabled={isInvalid} type="submit">
+    Submit
+  </Button>
           { error && <p>{error.message}</p> }
-        </form>
+        </Form>
+
+
+<div style={{display:'flex', flex:1, justifyContent:'flex-end'}}>
+        <div style={{display:'flex', flex: 1,  justifyContent:'space-between', maxWidth:'13vw' }}>
         <Link to={routes.PASSWORD_FORGET}>Forgot Password?</Link>
         <Link to={routes.SIGN_UP}>Sign Up</Link>
-      </div>
+        </div>
+        </div>
+        </Jumbotron>
+      </Container>
     )
   }
 }

@@ -8,6 +8,7 @@ class SignOut extends React.Component {
     return (
       <a
         href=""
+        style={{textDecoration:'none', color:'white'}}
         onClick={(e) => {
           e.preventDefault();
           auth.doSignOut();
