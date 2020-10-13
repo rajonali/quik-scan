@@ -6,6 +6,9 @@ import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import '../css/landing.css';
 import {Carousel, Card} from 'react-bootstrap';
+import Footer from './Footer';
+
+
 
 class Landing extends React.Component {
     render() {
@@ -164,6 +167,9 @@ class Landing extends React.Component {
                         </Container>
 
                     </Container>
+
+
+                    <Footer />
                 </header>
 
             </div>

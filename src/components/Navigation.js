@@ -8,7 +8,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-
+import {InputGroup, FormControl} from 'react-bootstrap';
 class Navigation extends React.Component {
     render() {
         if (this.props.user !== null) {
@@ -47,7 +47,7 @@ class Navigation extends React.Component {
             )
         } else {
             return (
-                <div style={{display:'flex', flex:1, maxWidth: '40vw'}}>
+                <div style={{display:'flex', flex:1,  justifyContent:'space-between', maxWidth: '50vw'}}>
 
                         <div class="container"
                     style={{
@@ -56,14 +56,22 @@ class Navigation extends React.Component {
                     flexDirection: 'row',
                     alignItems:'center',
                     justifyContent: 'space-evenly'}}>
-                        <Link to="/products"><h4>Products & Services</h4></Link>
-                        <Link to="/about-us"><h4>About Us</h4></Link>
-                        <Link to="/join-our-team"><h4>Careers</h4></Link>
-                        <Link to="/contact-us"><h4>Contact Us</h4></Link>
-
-                            <Button large>
-                                <Link to={routes.SIGN_IN} style={{ color:'white'}}>Sign In</Link>
-                            </Button>
+                   
+                   <InputGroup className="mb-3"       style={{maxWidth:'250px'}}
+>
+    <FormControl
+      placeholder="Search ..."
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <InputGroup.Text id="basic-addon2">SEARCH</InputGroup.Text>
+    </InputGroup.Append>
+  </InputGroup>
+                        <Link style={{textDecoration:'none'}} to="/products"><h4>Products & Services</h4></Link>
+                        <Link style={{textDecoration:'none'}} to="/about-us"><h4>About Us</h4></Link>
+                        <Link style={{textDecoration:'none'}} to="/join-our-team"><h4>Careers</h4></Link>
+                        <Link style={{textDecoration:'none'}} to="/contact-us"><h4>Contact Us</h4></Link>
                         </div>
 
                 </div>
