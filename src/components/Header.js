@@ -9,9 +9,9 @@ import '../css/header.css';
 
 function Header() {
     return (
-        <div className="header__container">
+        <div className="header__container" style={{display:'flex',flex:1}}>
             
-            <h1 style={{display:'flex',flex:1}}><Link to={routes.HOME}>Brand Logo</Link></h1>
+            <h1 style={{display:'flex', flex:1,}}><Link to={routes.HOME}>Brand Logo</Link></h1>
             <Navigation />
         </div>
     )

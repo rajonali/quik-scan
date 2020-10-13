@@ -47,21 +47,24 @@ class Navigation extends React.Component {
             )
         } else {
             return (
-                <div>
+                <div style={{display:'flex', flex:1, maxWidth: '40vw'}}>
 
-                    <nav>
                         <div class="container"
                     style={{
                     display: 'flex',
                     flex:1,
                     flexDirection: 'row',
-                    maxWidth: '20vw',
+                    alignItems:'center',
                     justifyContent: 'space-evenly'}}>
+                        <Link to="/products"><h4>Products & Services</h4></Link>
+                        <Link to="/about-us"><h4>About Us</h4></Link>
+                        <Link to="/join-our-team"><h4>Careers</h4></Link>
+                        <Link to="/contact-us"><h4>Contact Us</h4></Link>
+
                             <Button large>
                                 <Link to={routes.SIGN_IN} style={{ color:'white'}}>Sign In</Link>
                             </Button>
                         </div>
-                    </nav>
 
                 </div>
             )

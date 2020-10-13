@@ -1,2 +1,20 @@
 .landing__container {
 }
+
+
+
+.row > .col-sm {
+
+    margin:10px;
+
+}
+
+
+.landing__card {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:300px;
+}

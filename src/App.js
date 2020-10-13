@@ -15,8 +15,13 @@ import PublicRoute from './components/PublicRoute';
 import * as routes from './redux/constants/routes';
 import Auth from './components/Auth';
 import Header from './components/Header';
-
+import AllProducts from './components/AllProducts';
 import './App.css';
+import ContactUs from './components/ContactUs';
+import AboutUs from './components/AboutUs';
+import Careers from './components/Careers';
+
+
 
 class App extends React.Component {
 
@@ -46,6 +51,7 @@ class App extends React.Component {
                                 )
                             }
                         }}/>
+
                         <PublicRoute
                             exact
                             path={routes.SIGN_UP}
@@ -71,6 +77,32 @@ class App extends React.Component {
                             path={routes.ACCOUNT}
                             user={this.props.user}
                             component={() => <div><Header /><Account/></div>}/>
+
+
+<PublicRoute
+                            exact
+                            path={routes.ALL_PRODUCTS}
+                            user={this.props.user}
+                            component={() => <div><Header/><AllProducts /></div>}/>
+<PublicRoute
+                            exact
+                            path={routes.CONTACT_US}
+                            user={this.props.user}
+                            component={() => <div><Header/><ContactUs /></div>}/>
+<PublicRoute
+                            exact
+                            path={routes.ABOUT_US}
+                            user={this.props.user}
+                            component={() => <div><Header/><AboutUs /></div>}/>
+
+<PublicRoute
+                            exact
+                            path={routes.JOIN_OUR_TEAM}
+                            user={this.props.user}
+                            component={() => <div><Header/><Careers /></div>}/>
+
+
+
                     </Auth>
                 </div>
             </BrowserRouter>
