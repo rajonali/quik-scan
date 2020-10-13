@@ -1,11 +1,12 @@
 import {
     REQUEST_PRODUCT_ADD,
     PRODUCT_ADDED,
+    PRODUCT_UPDATED,
     PRODUCT_REMOVE
   } from '../actions/product';
   
   const initialState = {
-    product: null
+    product: {upc:'', imageURL:''}
   }
   
   export default function product(state = initialState, action) {
@@ -16,6 +17,12 @@ import {
             return Object.assign({}, state, {
                 product: action.product
             });
+
+        case PRODUCT_UPDATED:
+            return {
+                ...state,
+                product: action.product
+            }
         case PRODUCT_REMOVE:
             return Object.assign({}, state, {
                 product: null

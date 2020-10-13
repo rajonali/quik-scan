@@ -8,6 +8,9 @@ import {db} from '../firebase/firebase';
 import firebase from 'firebase';
 import AddProduct from './AddProduct';
 import ViewProducts from './ViewProducts'
+
+
+
 class Home extends Component {
     constructor(props) {
         super(props);

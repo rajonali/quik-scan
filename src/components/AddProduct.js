@@ -126,7 +126,7 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
         
         return (
             <Container>
-            <Card>
+            <Card style={{padding:'20px'}}>
                 <h1>Add Product</h1>
                 <Form
                     onSubmit={async(e) => {
@@ -137,6 +137,7 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
                         <Form.Label>UPC</Form.Label>
                         <Form.Control
                             value={this.state.upc}
+                            
                             onChange={event => this.setState({upc: event.target.value})}
                             type="text"
                             placeholder="Enter UPC ..."/>
@@ -144,11 +145,10 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
                     </Form.Group>
 
                     <Form.Group controlId="formFile">
-                        <Form.Label>Image File</Form.Label>
 
                         <Form.File
                             onChange={e => this.handlePhotos(e)}
-                            label="Example file input"
+                            label="Image"
                             type="file"
                             id="file1"
                             name="file1"
