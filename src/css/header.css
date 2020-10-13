@@ -6,3 +6,18 @@
     flex-direction:row;
     justify-content:space-between;
 }
+
+
+
+
+@media (min-width: 769px) {
+    .header__mobile_button {
+        display:none;
+    }
+}
+
+@media (max-width: 769px ) {
+    .header__nav {
+        visibility: hidden;
+    }
+}

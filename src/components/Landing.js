@@ -9,6 +9,8 @@ import {Carousel, Card} from 'react-bootstrap';
 import Footer from './Footer';
 
 
+import Backdrop from './Backdrop';
+
 
 class Landing extends React.Component {
     render() {
@@ -22,6 +24,8 @@ class Landing extends React.Component {
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
+
+
 
                 <header class="masthead text-center">
                     <div class="overlay"></div>
@@ -157,6 +161,8 @@ class Landing extends React.Component {
                         <Container>
 
                             <h1>What We Do</h1>
+
+                            
 
                         </Container>
 

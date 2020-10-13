@@ -9,6 +9,17 @@ import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import {InputGroup, FormControl} from 'react-bootstrap';
+
+import {
+    Navbar,
+    Nav,
+    NavItem,
+    NavDropdown,
+    DropdownButton,
+    MenuItem,
+    CollapsibleNav
+} from 'react-bootstrap';
+
 class Navigation extends React.Component {
     render() {
         if (this.props.user !== null) {
@@ -18,11 +29,10 @@ class Navigation extends React.Component {
                     class="container"
                     style={{
                     display: 'flex',
-                    flex:1,
+                    flex: 1,
                     flexDirection: 'row',
                     maxWidth: '20vw',
-                    justifyContent: 'space-evenly',
-                    
+                    justifyContent: 'space-evenly'
                 }}>
                     <Button variant="primary">
                         <Link
@@ -47,34 +57,100 @@ class Navigation extends React.Component {
             )
         } else {
             return (
-                <div style={{display:'flex', flex:1,  justifyContent:'space-between', maxWidth: '50vw'}}>
-
-                        <div class="container"
+                <Navbar
                     style={{
                     display: 'flex',
-                    flex:1,
-                    flexDirection: 'row',
-                    alignItems:'center',
-                    justifyContent: 'space-evenly'}}>
-                   
-                   <InputGroup className="mb-3"       style={{maxWidth:'250px'}}
->
-    <FormControl
-      placeholder="Search ..."
-      aria-label="Recipient's username"
-      aria-describedby="basic-addon2"
-    />
-    <InputGroup.Append>
-      <InputGroup.Text id="basic-addon2">SEARCH</InputGroup.Text>
-    </InputGroup.Append>
-  </InputGroup>
-                        <Link style={{textDecoration:'none'}} to="/products"><h4>Products & Services</h4></Link>
-                        <Link style={{textDecoration:'none'}} to="/about-us"><h4>About Us</h4></Link>
-                        <Link style={{textDecoration:'none'}} to="/join-our-team"><h4>Careers</h4></Link>
-                        <Link style={{textDecoration:'none'}} to="/contact-us"><h4>Contact Us</h4></Link>
-                        </div>
+                    flex: 1,
+                    justifyContent: 'space-between',
+                    maxWidth: '40vw'
+                }}>
 
-                </div>
+                    {this.props.vertical
+                        ? (
+                            <div
+                                class="container"
+                                style={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'space-evenly'
+                            }}>
+
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/products">
+                                    <h4>Products & Services</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/about-us">
+                                    <h4>About Us</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/join-our-team">
+                                    <h4>Careers</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/contact-us">
+                                    <h4>Contact Us</h4>
+                                </Link>
+                            </div>
+                        )
+                        : (
+
+                            <div
+                                class="container"
+                                style={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'row',
+                                alignItems: 'center',
+                                justifyContent: 'space-evenly'
+                            }}>
+
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/products">
+                                    <h4>Products & Services</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/about-us">
+                                    <h4>About Us</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/join-our-team">
+                                    <h4>Careers</h4>
+                                </Link>
+                                <Link
+                                    style={{
+                                    textDecoration: 'none'
+                                }}
+                                    to="/contact-us">
+                                    <h4>Contact Us</h4>
+                                </Link>
+                            </div>
+                        )}
+
+                </Navbar>
             )
         }
     }
