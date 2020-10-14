@@ -1,14 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-
+import '../css/navigation.css';
 import SignOut from './SignOut';
 import * as routes from '../redux/constants/routes';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import {InputGroup, FormControl} from 'react-bootstrap';
+import {InputGroup, Card, FormControl} from 'react-bootstrap';
 
 import {
     Navbar,
@@ -59,58 +59,79 @@ class Navigation extends React.Component {
             return (
                 <Navbar
                     style={{
+                        padding:0,
                     display: 'flex',
                     flex: 1,
-                    justifyContent: 'space-between',
-                    maxWidth: '40vw'
+                    maxWidth: '75vw',
+                    height:'100%'
+
+                    
+                    
                 }}>
 
                     {this.props.vertical
                         ? (
                             <div
-                                class="container"
                                 style={{
                                 display: 'flex',
                                 flex: 1,
+                                height:'100%',
+                                justifyContent:'center',
                                 flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'space-evenly'
+
+                                
                             }}>
 
+                                <h1 onClick={(e) => {this.props.onClickHandler(e)}} style={{position:'fixed', top:0, right:220,}}>x</h1>
+
+
+
+<Card style={{display:'grid',placeItems:'center',padding:10, width:'100%', height:'10vh'}}>
                                 <Link
                                     style={{
-                                    textDecoration: 'none'
+                                    textDecoration: 'none',
+                                    
                                 }}
                                     to="/products">
-                                    <h4>Products & Services</h4>
+                                    <h2>Products</h2>
                                 </Link>
+                                </Card>
+                                <Card style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh', }}>
+
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/about-us">
-                                    <h4>About Us</h4>
+                                    <h2>About Us</h2>
                                 </Link>
+                                </Card>
+                                <Card style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
+
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/join-our-team">
-                                    <h4>Careers</h4>
+                                    <h2>Careers</h2>
                                 </Link>
+                                </Card>
+                                <Card style={{ display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
+
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/contact-us">
-                                    <h4>Contact Us</h4>
+                                    <h2>Contact</h2>
                                 </Link>
+                                </Card>
                             </div>
                         )
                         : (
 
                             <div
-                                class="container"
+                                class="container2"
                                 style={{
                                 display: 'flex',
                                 flex: 1,
@@ -121,29 +142,29 @@ class Navigation extends React.Component {
 
                                 <Link
                                     style={{
-                                    textDecoration: 'none'
+                                    textDecoration: 'none', color:'black'
                                 }}
                                     to="/products">
                                     <h4>Products & Services</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                    textDecoration: 'none'
-                                }}
+                                        textDecoration: 'none', color:'black'
+                                    }}
                                     to="/about-us">
                                     <h4>About Us</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                    textDecoration: 'none'
-                                }}
+                                        textDecoration: 'none', color:'black'
+                                    }}
                                     to="/join-our-team">
                                     <h4>Careers</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                    textDecoration: 'none'
-                                }}
+                                        textDecoration: 'none', color:'black'
+                                    }}
                                     to="/contact-us">
                                     <h4>Contact Us</h4>
                                 </Link>

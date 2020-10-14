@@ -27,31 +27,96 @@ function Header() {
             className="header__container"
             style={{
             display: 'flex',
-            flex: 1
+            justifyContent: 'center',
+            flex: 1,
+            flexDirection: 'column'
         }}>
-
-            <h1
+            <div
                 style={{
-                display: 'flex',
-                paddingLeft: '20px',
-                flex: 1
+                display: 'grid',
+                placeItems: 'center'
             }}>
-                <Link
+                <div
+                    className="header__mobile_brand"
                     style={{
-                    textDecoration: 'none'
-                }}
-                    to={routes.HOME}>BRAND</Link>
-            </h1>
+                    margin: 0,
+                    display: 'flex',
+                    flex: 1,
+                    padding: '20px',
+                    justifyContent: 'center'
+                }}>
 
-
-            <div style={{display:'flex', flex:1,  justifyContent:'flex-end'}}className="header__nav">
-                <Navigation />
+                    <Link to="/">
+                        <img
+                            src="https://holtzmancorp.com/wp-content/uploads/2018/05/Exxon-300x164.png"/>
+                    </Link>
                 </div>
-            <div className="header__mobile_button">
-                <DrawerToggleButton onClick={(e) => (drawerToggleClickHandler(e))}/>
+
+                <div
+                    className="header__mobile_button"
+                    style={{
+                    display: 'flex',
+                    flex: 1,
+                    justifyContent: 'center',
+                    paddingBottom: '10px'
+                }}>
+                    <DrawerToggleButton onClick={(e) => (drawerToggleClickHandler(e))}/>
+                </div>
             </div>
 
-            <Sidedrawer show={show}/>
+            <div
+                className="purple"
+                style={{
+                display: 'flex',
+                position: 'fixed',
+                width: '100%',
+                top: 0,
+                flex: 1,
+                alignItems: 'center',
+                padding: '20px',
+                justifyContent: 'center'
+            }}>
+
+                <span
+                    className="red"
+                    style={{
+                    display: 'flex',
+                    flex: 1,
+                    paddingLeft: '20px',
+                    flexDirection: 'row',
+                    justifyContent: 'flex-begin',
+                    alignItems: 'flex-end',
+                    height: '100%',
+                    width: '100%'
+                }}>
+                    <Link
+                        className="header__web_brand"
+                        style={{
+                        textDecoration: 'none'
+                    }}
+                        to={routes.HOME}>
+                        <img
+                            src="https://holtzmancorp.com/wp-content/uploads/2018/05/Exxon-300x164.png"/>
+                    </Link>
+                </span>
+
+                <div
+                    style={{
+                    display: 'flex',
+                    flex: 1,
+                    justifyContent: 'flex-end'
+                }}className="header__nav">
+                    <Navigation onClick={drawerToggleClickHandler}/>
+                </div>
+
+            </div>
+            <div
+                style={{
+                display: 'flex',
+                justifyContent: 'center'
+            }}></div>
+
+            <Sidedrawer onClick={drawerToggleClickHandler} show={show}/>
 
         </div>
     )

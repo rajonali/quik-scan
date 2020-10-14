@@ -2,12 +2,12 @@ import React from 'react'
 import '../css/sidedrawer.css'
 import Navigation from './Navigation';
 
-function Sidedrawer({show}) {
+function Sidedrawer({show, onClick}) {
 return (
 
 show ? (
-    <nav className="side-drawer">
-                    <Navigation vertical={true}/>
+    <nav style={{margin:'0px !important'}} className="side-drawer">
+                    <Navigation show={show} onClickHandler={onClick} vertical={true}/>
                 </nav>
     ):(<div></div>)
 )

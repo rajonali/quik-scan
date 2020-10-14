@@ -7,7 +7,7 @@ import {Button} from 'react-bootstrap';
 
 function DrawerToggleButton({onClick}) {
     return (
-        <Button onClick={onClick} className="toggle-button">
+        <Button onClick={onClick} variant="dark" className="toggle-button">
             <FontAwesomeIcon icon={faBars}/>
         </Button>
     )
