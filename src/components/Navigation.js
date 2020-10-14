@@ -86,46 +86,46 @@ class Navigation extends React.Component {
 
 
 
-<Card style={{display:'grid',placeItems:'center',padding:10, width:'100%', height:'10vh'}}>
+<div style={{display:'grid',placeItems:'center',padding:10, width:'100%', height:'10vh'}}>
                                 <Link
                                     style={{
                                     textDecoration: 'none',
                                     
                                 }}
                                     to="/products">
-                                    <h2>Products</h2>
+                                    <h2 style={{color:'black'}}>Products</h2>
                                 </Link>
-                                </Card>
-                                <Card style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh', }}>
+                                </div>
+                                <div style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh', }}>
 
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/about-us">
-                                    <h2>About Us</h2>
+                                    <h2 style={{color:'black'}}>About Us</h2>
                                 </Link>
-                                </Card>
-                                <Card style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
+                                </div>
+                                <div style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
 
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/join-our-team">
-                                    <h2>Careers</h2>
+                                    <h2 style={{color:'black'}}>Careers</h2>
                                 </Link>
-                                </Card>
-                                <Card style={{ display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
+                                </div>
+                                <div style={{ display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
 
                                 <Link
                                     style={{
                                     textDecoration: 'none'
                                 }}
                                     to="/contact-us">
-                                    <h2>Contact</h2>
+                                    <h2 style={{color:'black'}}>Contact</h2>
                                 </Link>
-                                </Card>
+                                </div>
                             </div>
                         )
                         : (

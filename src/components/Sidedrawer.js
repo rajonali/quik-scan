@@ -6,7 +6,7 @@ function Sidedrawer({show, onClick}) {
 return (
 
 show ? (
-    <nav style={{margin:'0px !important'}} className="side-drawer">
+    <nav style={{backgroundColor:'rgba(255,255,255,0.8)' , margin:'0px !important'}} className="side-drawer">
                     <Navigation show={show} onClickHandler={onClick} vertical={true}/>
                     
                 </nav>
