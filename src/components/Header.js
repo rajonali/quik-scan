@@ -7,6 +7,7 @@ import {Button} from 'react-bootstrap';
 import '../css/header.css';
 import DrawerToggleButton from './DrawerToggleButton';
 import Sidedrawer from './Sidedrawer';
+import Backdrop from './Backdrop';
 
 function Header() {
 

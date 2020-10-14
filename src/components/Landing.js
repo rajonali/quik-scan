@@ -8,9 +8,7 @@ import '../css/landing.css';
 import {Carousel, Card} from 'react-bootstrap';
 import Footer from './Footer';
 
-
 import Backdrop from './Backdrop';
-
 
 class Landing extends React.Component {
     render() {
@@ -20,16 +18,17 @@ class Landing extends React.Component {
                 display: 'flex',
                 flex: 1,
                 flexDirections: 'column',
-                padding: 20,
                 justifyContent: 'center',
                 alignItems: 'center'
             }}>
 
-
-
                 <header class="masthead text-center">
                     <div class="overlay"></div>
-                    <Container class="landing__container">
+                    <Container
+                        class="landing__container"
+                        style={{
+                        padding: 0
+                    }}>
 
                         <Carousel>
                             <Carousel.Item interval={1000}>
@@ -85,31 +84,36 @@ class Landing extends React.Component {
                             </Carousel.Item>
                         </Carousel>
 
-
-<Container>
-<Jumbotron class="row" style={{margin:30}}>
-                            <div class="col-xl-9 mx-auto">
-                                <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
-                            </div>
-                            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                            <input
-                                                type="email"
-                                                class="form-control form-control-lg"
-                                                placeholder="Enter your email..."/>
+                        <Container
+                            style={{
+                            padding: 0
+                        }}>
+                            <div
+                                class="row"
+                                style={{
+                                margin: 30
+                            }}>
+                                <div class="col-xl-9 mx-auto">
+                                    <h1 class="mb-5">Build a landing page for your business or project and generate more leads!</h1>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-12 col-md-9 mb-2 mb-md-0">
+                                                <input
+                                                    type="email"
+                                                    class="form-control form-control-lg"
+                                                    placeholder="Enter your email..."/>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                                            </div>
                                         </div>
-                                        <div class="col-12 col-md-3">
-                                            <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </Jumbotron>
 
-  
-</Container>
+                        </Container>
 
                         <Container>
 
@@ -117,10 +121,15 @@ class Landing extends React.Component {
                                 style={{
                                 display: 'flex',
                                 flex: 1,
-                                flexDirection:'column'
+                                flexDirection: 'column'
                             }}>
-<h1>Newest Additions</h1>
-                                <div class="row" style={{flex:1, display:'flex'}}>
+                                <h1>Newest Additions</h1>
+                                <div
+                                    class="row"
+                                    style={{
+                                    flex: 1,
+                                    display: 'flex'
+                                }}>
                                     <div class="col-sm">
                                         <Card className="landing__card">
                                             <h1>s1</h1>
@@ -162,8 +171,6 @@ class Landing extends React.Component {
 
                             <h1>What We Do</h1>
 
-                            
-
                         </Container>
 
                         <Container>
@@ -174,8 +181,7 @@ class Landing extends React.Component {
 
                     </Container>
 
-
-                    <Footer />
+                    <Footer/>
                 </header>
 
             </div>
