@@ -110,7 +110,7 @@ class Landing extends React.Component {
 
 
 
-<div style={{padding:'40px'}}><h3>1410 N Range Ave, Denham Springs, LA 70726</h3></div>
+<div style={{padding:'40px'}}><h3>Located @ 1410 N Range Ave, Denham Springs, LA 70726</h3></div>
 
 
                                 <div class="row" style={{flex:1,                               paddingTop:'50px',

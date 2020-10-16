@@ -74,7 +74,8 @@ class Navigation extends React.Component {
                                 flex: 1,
                                 height: '100%',
                                 justifyContent: 'center',
-                                flexDirection: 'column'
+                                flexDirection: 'column',
+                                
                             }}>
 
                                 <h1
@@ -104,7 +105,7 @@ class Navigation extends React.Component {
                                         to="/products">
                                         <h2
                                             style={{
-                                            color: 'black'
+                                            color: 'white'
                                         }}>Products</h2>
                                     </Link>
                                 </div>
@@ -124,7 +125,7 @@ class Navigation extends React.Component {
                                         to="/about-us">
                                         <h2
                                             style={{
-                                            color: 'black'
+                                            color: 'white'
                                         }}>About Us</h2>
                                     </Link>
                                 </div>
@@ -144,7 +145,7 @@ class Navigation extends React.Component {
                                         to="/join-our-team">
                                         <h2
                                             style={{
-                                            color: 'black'
+                                            color: 'white'
                                         }}>Careers</h2>
                                     </Link>
                                 </div>
@@ -164,7 +165,7 @@ class Navigation extends React.Component {
                                         to="/contact-us">
                                         <h2
                                             style={{
-                                            color: 'black'
+                                            color: 'white'
                                         }}>Contact</h2>
                                     </Link>
                                 </div>
