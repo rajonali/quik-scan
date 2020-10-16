@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Form } from 'react-bootstrap'
+import { Container, Form, Button} from 'react-bootstrap'
 
 function Careers() {
     return (
@@ -20,6 +20,7 @@ function Careers() {
     <Form.Label>Phone Number</Form.Label>
     <Form.Control type="text" placeholder="Phone Number" />
   </Form.Group>
+  <Button>Submit</Button>
 
 </Form>
         </Container>
