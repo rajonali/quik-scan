@@ -59,14 +59,11 @@ class Navigation extends React.Component {
             return (
                 <Navbar
                     style={{
-                        padding:0,
+                    padding: 0,
                     display: 'flex',
                     flex: 1,
                     maxWidth: '75vw',
-                    height:'100%'
-
-                    
-                    
+                    height: '100%'
                 }}>
 
                     {this.props.vertical
@@ -75,56 +72,101 @@ class Navigation extends React.Component {
                                 style={{
                                 display: 'flex',
                                 flex: 1,
-                                height:'100%',
-                                justifyContent:'center',
-                                flexDirection: 'column',
-
-                                
+                                height: '100%',
+                                justifyContent: 'center',
+                                flexDirection: 'column'
                             }}>
 
-                                <h1 onClick={(e) => {this.props.onClickHandler(e)}} style={{position:'fixed', top:0, right:220,}}>x</h1>
-
-
-
-<div style={{display:'grid',placeItems:'center',padding:10, width:'100%', height:'10vh'}}>
-                                <Link
-                                    style={{
-                                    textDecoration: 'none',
-                                    
+                                <h1
+                                    onClick={(e) => {
+                                    this
+                                        .props
+                                        .onClickHandler(e)
                                 }}
-                                    to="/products">
-                                    <h2 style={{color:'black'}}>Products</h2>
-                                </Link>
+                                    style={{
+                                    position: 'fixed',
+                                    top: 0,
+                                    right: 220
+                                }}>x</h1>
+
+                                <div
+                                    style={{
+                                    display: 'grid',
+                                    placeItems: 'center',
+                                    padding: 10,
+                                    width: '100%',
+                                    height: '10vh'
+                                }}>
+                                    <Link
+                                        style={{
+                                        textDecoration: 'none'
+                                    }}
+                                        to="/products">
+                                        <h2
+                                            style={{
+                                            color: 'black'
+                                        }}>Products</h2>
+                                    </Link>
                                 </div>
-                                <div style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh', }}>
-
-                                <Link
+                                <div
                                     style={{
-                                    textDecoration: 'none'
-                                }}
-                                    to="/about-us">
-                                    <h2 style={{color:'black'}}>About Us</h2>
-                                </Link>
+                                    display: 'grid',
+                                    padding: 10,
+                                    placeItems: 'center',
+                                    width: '100%',
+                                    height: '10vh'
+                                }}>
+
+                                    <Link
+                                        style={{
+                                        textDecoration: 'none'
+                                    }}
+                                        to="/about-us">
+                                        <h2
+                                            style={{
+                                            color: 'black'
+                                        }}>About Us</h2>
+                                    </Link>
                                 </div>
-                                <div style={{display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
-
-                                <Link
+                                <div
                                     style={{
-                                    textDecoration: 'none'
-                                }}
-                                    to="/join-our-team">
-                                    <h2 style={{color:'black'}}>Careers</h2>
-                                </Link>
+                                    display: 'grid',
+                                    padding: 10,
+                                    placeItems: 'center',
+                                    width: '100%',
+                                    height: '10vh'
+                                }}>
+
+                                    <Link
+                                        style={{
+                                        textDecoration: 'none'
+                                    }}
+                                        to="/join-our-team">
+                                        <h2
+                                            style={{
+                                            color: 'black'
+                                        }}>Careers</h2>
+                                    </Link>
                                 </div>
-                                <div style={{ display:'grid',padding:10, placeItems:'center', width:'100%', height:'10vh'}}>
-
-                                <Link
+                                <div
                                     style={{
-                                    textDecoration: 'none'
-                                }}
-                                    to="/contact-us">
-                                    <h2 style={{color:'black'}}>Contact</h2>
-                                </Link>
+                                    display: 'grid',
+                                    padding: 10,
+                                    placeItems: 'center',
+                                    width: '100%',
+                                    height: '10vh'
+                                }}>
+
+                                    <Link
+                                        style={{
+                                        textDecoration: 'none'
+                                    }}
+                                        to="/contact-us">
+                                        <h2
+                                            style={{
+                                            color: 'black'
+                                        }}>Contact</h2>
+                                    </Link>
                                 </div>
                             </div>
                         )
@@ -142,29 +184,33 @@ class Navigation extends React.Component {
 
                                 <Link
                                     style={{
-                                    textDecoration: 'none', color:'black'
+                                    textDecoration: 'none',
+                                    color: 'black'
                                 }}
                                     to="/products">
                                     <h4>Products & Services</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                        textDecoration: 'none', color:'black'
-                                    }}
+                                    textDecoration: 'none',
+                                    color: 'black'
+                                }}
                                     to="/about-us">
                                     <h4>About Us</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                        textDecoration: 'none', color:'black'
-                                    }}
+                                    textDecoration: 'none',
+                                    color: 'black'
+                                }}
                                     to="/join-our-team">
                                     <h4>Careers</h4>
                                 </Link>
                                 <Link
                                     style={{
-                                        textDecoration: 'none', color:'black'
-                                    }}
+                                    textDecoration: 'none',
+                                    color: 'black'
+                                }}
                                     to="/contact-us">
                                     <h4>Contact Us</h4>
                                 </Link>

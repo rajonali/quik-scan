@@ -39,7 +39,7 @@ class Landing extends React.Component {
 
                     <Container class="landing__container" style={{padding:0}}>
 
-                        <Carousel>
+                        <Carousel style={{zIndex:-999}}>
                             <Carousel.Item interval={1000}>
                                 <div
                                     style={{
@@ -105,7 +105,7 @@ class Landing extends React.Component {
 
 
 
-<div style={{padding:'40px'}}><h3><strong>Welcome!</strong></h3></div>
+<div style={{padding:'40px'}}><h3><strong>Welcome to Jiffy Mart @ 1410 N. Range!</strong></h3></div>
 <img style={{width:'100%'}} src="https://i.ibb.co/drLt8h2/rsz-1screenshot-from-2020-10-13-22-21-29-1.png" />
 
 

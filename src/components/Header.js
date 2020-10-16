@@ -28,6 +28,7 @@ function Header() {
             className="header__container"
             style={{
             display: 'flex',
+
             justifyContent: 'center',
             flex: 1,
             flexDirection: 'column'
@@ -35,6 +36,7 @@ function Header() {
             <div
                 style={{
                 display: 'grid',
+                
                 placeItems: 'center'
             }}>
                 <div
@@ -95,7 +97,7 @@ function Header() {
                         style={{
                         textDecoration: 'none'
                     }}
-                        to={routes.HOME}>
+                        to='/'>
                         <img
                             src="https://holtzmancorp.com/wp-content/uploads/2018/05/Exxon-300x164.png"/>
                     </Link>

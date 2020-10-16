@@ -15,8 +15,11 @@ function ViewProducts() {
                 id: doc.id,
                 data: doc.data()
             })))));
+
+            return (unsubscribe)
+
     
-        }, []);
+        }, [products]);
 
 
 
