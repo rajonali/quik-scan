@@ -105,7 +105,7 @@ class Landing extends React.Component {
 
 
 
-<div style={{padding:'40px'}}><h3><strong>Welcome to Jiffy Mart @ 1410 N. Range!</strong></h3></div>
+<div style={{padding:'40px'}}><h3><strong>Welcome to Jiffy Mart!</strong></h3></div>
 <img style={{width:'100%'}} src="https://i.ibb.co/drLt8h2/rsz-1screenshot-from-2020-10-13-22-21-29-1.png" />
 
 

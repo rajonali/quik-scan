@@ -37,6 +37,7 @@ function Header() {
                 style={{
                 display: 'grid',
                 
+                
                 placeItems: 'center'
             }}>
                 <div
@@ -73,6 +74,8 @@ function Header() {
                 display: 'flex',
                 position: 'fixed',
                 width: '100%',
+                backgroundColor:'rgba(255,255,255,0.9)',
+
                 top: 0,
                 flex: 1,
                 alignItems: 'center',
