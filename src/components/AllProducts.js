@@ -9,7 +9,7 @@ import {db} from '../firebase/firebase';
 
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-
+import '../css/all-products.css'
 
 function AllProducts({}) {
 
@@ -37,27 +37,18 @@ justifyContent:'space-around'
         }}>
 
             <div
-                style={{
-                        padding:'20px',
-                display: 'flex',
-                width: '500px',
-            }}>
+
+className="sidebar__container">
                 <Container
-                    style={{
-                    flex: 1,
-                    display: 'flex',
-                    borderStyle: "solid",
-                    borderWidth:'1px',
-                    justifyContent:'center',
-                    alignItems:'center',
-                    
-                }}>
-<Container>
+                    className="filters__sidebar">
+                      <Container>
+
 
   <Container>
 
-    <h5>Filters</h5>
 
+ <h3><strong>Filters</strong></h3>
+  <br />
     <Container class="mb-4">
 
       <h6 class="font-weight-bold mb-3">Condition</h6>
@@ -318,18 +309,13 @@ justifyContent:'space-around'
 
             <Container
                 style={{
-                display: 'grid',
-                
-                placeItems: 'center',
                 
             }}>
                 <div class="row">
                     {products.map((product) => (
-                        <div class="col-sm">
+                        <div class="col">
                             <Card
                                 style={{
-                                display: 'grid',
-                                placeItems: 'center'
                             }}>
                                 <Card.Body
                                     style={{

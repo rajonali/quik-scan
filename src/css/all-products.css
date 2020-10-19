@@ -1,0 +1,36 @@
+.rating {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.sidebar__container {
+    margin: '20px';
+    padding: '20px';
+    display: 'flex';
+    width: '500px';
+
+}
+
+.filters__sidebar {
+    padding: 10px;
+    flex: 1;
+    display: 'flex';
+    border-style: "solid";
+    border-width: '1px';
+    justify-content: 'center';
+    align-items: 'center';
+
+}
+@media only screen and (max-width: 600px) {
+    .filters__sidebar {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .sidebar__container {
+        visibility: hidden;
+        width: 0%;
+
+    }
+}

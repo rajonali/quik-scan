@@ -24,11 +24,6 @@ class AddProduct extends Component {
 
     handleForm = (e) => {
         e.preventDefault();
-        const min = 1;
-        const max = 100;
-        const rand = min + Math.random() * (max - min);
-        this.setState({ random: this.state.random + rand });
-        console.log(this.state)
 
         const data = {
             upc: this.state.upc,
@@ -51,7 +46,7 @@ var storage = firebase.storage();
 var storageRef = storage.ref();
 
 // Upload file and metadata to the object 'images/mountains.jpg'
-var uploadTask = storageRef.child('images/' + this.state.random + data.files.name ).put(data.files, metadata);
+var uploadTask = storageRef.child('images/' + 1 + Math.random() * (100 - 1)).put(data.files, metadata);
 
 
 

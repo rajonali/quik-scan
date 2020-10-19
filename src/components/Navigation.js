@@ -186,7 +186,7 @@ class Navigation extends React.Component {
                                 <Link
                                     style={{
                                     textDecoration: 'none',
-                                    color: 'white'
+                                    color: 'black'
                                 }}
                                     to="/products">
                                     <h4>Products & Services</h4>
@@ -194,7 +194,7 @@ class Navigation extends React.Component {
                                 <Link
                                     style={{
                                     textDecoration: 'none',
-                                    color: 'white'
+                                    color: 'black'
                                 }}
                                     to="/about-us">
                                     <h4>About Us</h4>
@@ -202,7 +202,7 @@ class Navigation extends React.Component {
                                 <Link
                                     style={{
                                     textDecoration: 'none',
-                                    color: 'white'
+                                    color: 'black'
                                 }}
                                     to="/join-our-team">
                                     <h4>Careers</h4>
@@ -210,7 +210,7 @@ class Navigation extends React.Component {
                                 <Link
                                     style={{
                                     textDecoration: 'none',
-                                    color: 'white'
+                                    color: 'black'
                                 }}
                                     to="/contact-us">
                                     <h4>Contact Us</h4>

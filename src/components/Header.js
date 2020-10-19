@@ -74,7 +74,7 @@ function Header() {
                 display: 'flex',
                 position: 'fixed',
                 width: '100%',
-                background: 'linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(70,29,124,1) 35%, rgba(253,208,35,1) 100%)',
+                background: 'rgba(255,255,255,0.9)',
                 top: 0,
                 flex: 1,
                 alignItems: 'center',
