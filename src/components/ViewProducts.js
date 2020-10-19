@@ -1,7 +1,7 @@
 import React, {Component, useEffect, useState} from 'react';
 import {db} from '../firebase/firebase';
 import ProductListItem from './ProductListItem';
-import {Table, Container} from 'react-bootstrap';
+import {Table,Card, Container} from 'react-bootstrap';
 
 function ViewProducts() {
 
@@ -24,7 +24,9 @@ function ViewProducts() {
 
 
             return (
-                <Container >
+                <Container>
+                                    <Card style={{padding:15}}>
+
                     <br />
                     <h1>View Products</h1>
 <Table>
@@ -45,6 +47,8 @@ function ViewProducts() {
                 </tbody>
 
                 </Table>
+                </Card>
+
                 </Container>
             );
     }

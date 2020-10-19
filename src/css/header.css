@@ -21,6 +21,7 @@
 @media (max-width: 769px ) {
     .header__nav {
         visibility: hidden;
+
     }
     .header__web_brand {
         visibility: hidden;
