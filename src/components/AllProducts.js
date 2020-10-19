@@ -334,7 +334,7 @@ className="sidebar__container">
 
                                     {/*                                    <div>{product.data.upc}</div> */}
                                     <h2>{product.data.name}</h2>
-                                    <h2>$4.99</h2>
+                                    <h2>${product.data.price ? (product.data.price):(0)}</h2>
                                     <h4>Qty: {product.data.quantity}</h4>
                                     <Button>Add to Cart</Button>
 

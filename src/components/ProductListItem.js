@@ -4,7 +4,7 @@ import {Card, Modal, Button, Form} from 'react-bootstrap'
 import {Link} from 'react-router-dom';
 import firebase from 'firebase';
 
-function ProductListItem({id, addNewProduct, upc, imageURL, name, quantity}) {
+function ProductListItem({id, addNewProduct, upc, imageURL, name, quantity, price}) {
  
  
     const [show,
@@ -15,6 +15,8 @@ function ProductListItem({id, addNewProduct, upc, imageURL, name, quantity}) {
     const [NAME,setNAME] = useState(name)   
 
     const [QUANTITY, setQUANTITY] = useState(quantity)
+
+    const [PRICE, setPRICE] = useState(price)
     
     
 
@@ -23,7 +25,7 @@ const handleSubmit = (e) => {
     db
         .collection("products")
         .doc(id)
-        .update({upc:UPC, files:IMAGEURL, name:NAME, quantity:QUANTITY})
+        .update({upc:UPC, files:IMAGEURL, name:NAME, quantity:QUANTITY, price:PRICE})
         .then(() => {
             console.log(id);
         })
@@ -114,6 +116,13 @@ const deleteItem = (e, id) => {
         </Form.Label>
         <Form.Control type="text" value={UPC} onChange={e => {setUPC(e.target.value)}}/>
     </Form.Group>
+
+    <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Product Price
+        </Form.Label>
+        <Form.Control type="text" value={PRICE} onChange={e => {setPRICE(e.target.value)}}/>
+    </Form.Group>
+
 
     <Form.Group controlId="exampleForm.ControlInput1">
         <Form.Label>Product Quantity

@@ -32,12 +32,14 @@ function ViewProducts() {
     <tr>
       <th>Img</th>
       <th>UPC</th>
+      <th>Quantity</th>
+      <th>Price</th>
     </tr>
   </thead>
 <tbody>
 {products.map((product) => (
 
-                    <ProductListItem key={product.id} id={product.id} name={product.data.name} imageURL={product.data.files} upc={product.data.upc} quantity={product.data.quantity} />
+                    <ProductListItem key={product.id} id={product.id} name={product.data.name} imageURL={product.data.files} upc={product.data.upc} quantity={product.data.quantity} price={product.data.price} />
                     
                 ))}
                 </tbody>
