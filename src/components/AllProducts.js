@@ -309,13 +309,16 @@ className="sidebar__container">
 
             <Container
                 style={{
+                  display:'flex',
+                  justifyContent:'space-between'
                 
             }}>
                 <div class="row">
                     {products.map((product) => (
-                        <div class="col">
+                        <div class="col-xs">
                             <Card
                                 style={{
+                                  minHeight:'60vh',
                                   
                             }}>
                                                                       <Card.Img
@@ -329,12 +332,14 @@ className="sidebar__container">
                                 <Card.Body
                                     style={{
                                     display: 'grid',
-                                    placeItems: 'center'
+                                    placeItems: 'center',
+                                    overflowWrap: 'break-word'
+
                                 }}>
 
                                     {/*                                    <div>{product.data.upc}</div> */}
-                                    <h2>{product.data.name}</h2>
-                                    <h2>${product.data.price ? (product.data.price):(0)}</h2>
+                                    <h3 style={{textAlign:'center', margin:'0 auto', maxWidth: '150px', minHeight:'15vh'}}>{product.data.name}</h3>
+                                    <h3>${product.data.price ? (product.data.price):(0)}</h3>
                                     <h4>Qty: {product.data.quantity}</h4>
                                     <Button>Add to Cart</Button>
 
