@@ -148,7 +148,7 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
                         <Form.File
                             onChange={e => this.handlePhotos(e)}
                             label="Image"
-                            type="file"
+                            type="button"
                             id="file1"
                             name="file1"
                             accept="image/*"

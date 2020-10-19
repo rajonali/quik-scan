@@ -316,31 +316,26 @@ className="sidebar__container">
                         <div class="col">
                             <Card
                                 style={{
+                                  
                             }}>
+                                                                      <Card.Img
+                                            style={{
+                                            display: 'flex',
+                                            maxWidth: '250px',
+                                            maxHeight: '250px'
+                                        }}
+                                            src={product.data.files}/>
+
                                 <Card.Body
                                     style={{
                                     display: 'grid',
                                     placeItems: 'center'
                                 }}>
 
-                                    <div
-                                        style={{
-                                        display: 'flex',
-                                        height: 200,
-                                        width: 200
-                                    }}>
-                                        <img
-                                            style={{
-                                            display: 'flex',
-                                            maxWidth: '250px',
-                                            backgroundColor: 'yellow',
-                                            maxHeight: '250px'
-                                        }}
-                                            src={product.data.files}/>
-                                    </div>
                                     {/*                                    <div>{product.data.upc}</div> */}
+                                    <h2>{product.data.name}</h2>
                                     <h2>$4.99</h2>
-                                    <h4>Qty: 23</h4>
+                                    <h4>Qty: {product.data.quantity}</h4>
                                     <Button>Add to Cart</Button>
 
                                 </Card.Body>

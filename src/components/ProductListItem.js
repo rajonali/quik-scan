@@ -4,7 +4,7 @@ import {Card, Modal, Button, Form} from 'react-bootstrap'
 import {Link} from 'react-router-dom';
 import firebase from 'firebase';
 
-function ProductListItem({id, addNewProduct, upc, imageURL}) {
+function ProductListItem({id, addNewProduct, upc, imageURL, name, quantity}) {
  
  
     const [show,
@@ -12,7 +12,9 @@ function ProductListItem({id, addNewProduct, upc, imageURL}) {
     const [UPC, setUPC] = useState(upc);
     const [IMAGEURL, setIMAGEURL] = useState(imageURL);
     
-    
+    const [NAME,setNAME] = useState(name)   
+
+    const [QUANTITY, setQUANTITY] = useState(quantity)
     
     
 
@@ -21,7 +23,7 @@ const handleSubmit = (e) => {
     db
         .collection("products")
         .doc(id)
-        .update({upc:UPC, files:IMAGEURL})
+        .update({upc:UPC, files:IMAGEURL, name:NAME, quantity:QUANTITY})
         .then(() => {
             console.log(id);
         })
@@ -33,6 +35,22 @@ const handleSubmit = (e) => {
 
 
 }
+
+
+
+const deleteItem = (e, id) => {
+    e.preventDefault();
+    db
+        .collection("products")
+        .doc(id).delete()
+        .then(() => {
+            console.log("Successfully deleted" + id);
+        })
+        .catch = (e) => {
+        console.log(e)
+    }
+}
+
 
 
 
@@ -82,11 +100,27 @@ const handleSubmit = (e) => {
 </div>
 <br/>
 <Form onSubmit={e => (handleSubmit(e))}>
+    
+    
+<Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Product Name
+        </Form.Label>
+        <Form.Control type="text" value={NAME} onChange={e => {setNAME(e.target.value)}}/>
+    </Form.Group>
+
+    
     <Form.Group controlId="exampleForm.ControlInput1">
         <Form.Label>Product UPC
         </Form.Label>
         <Form.Control type="text" value={UPC} onChange={e => {setUPC(e.target.value)}}/>
     </Form.Group>
+
+    <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Label>Product Quantity
+        </Form.Label>
+        <Form.Control type="text" value={QUANTITY} onChange={e => {setQUANTITY(e.target.value)}}/>
+    </Form.Group>
+
 
     <Form.Group controlId="exampleForm.ControlInput1">
         <Form.Label>Image URL
@@ -109,7 +143,7 @@ const handleSubmit = (e) => {
 
                     <Button  variant="success">ADD TO CART</Button>
 
-                    <Button  variant="danger">DELETE</Button>
+                    <Button onClick={(e)=> {deleteItem(e,id)}} variant="danger">DELETE</Button>
 
 
                 </td>

@@ -37,7 +37,7 @@ function ViewProducts() {
 <tbody>
 {products.map((product) => (
 
-                    <ProductListItem key={product.id} id={product.id} name={product.data.name} imageURL={product.data.files} upc={product.data.upc} />
+                    <ProductListItem key={product.id} id={product.id} name={product.data.name} imageURL={product.data.files} upc={product.data.upc} quantity={product.data.quantity} />
                     
                 ))}
                 </tbody>
