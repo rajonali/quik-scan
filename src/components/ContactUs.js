@@ -14,9 +14,15 @@ function ContactUs() {
     <Form.Label>Name</Form.Label>
     <Form.Control type="text" placeholder="Enter email" />
   </Form.Group>
+
+  <Form.Group controlId="formGroupEmail">
+    <Form.Label>Subject</Form.Label>
+    <Form.Control type="text" placeholder="Subject" />
+  </Form.Group>
+
   <Form.Group controlId="formGroupPassword">
     <Form.Label>Message</Form.Label>
-    <Form.Control as="textarea" type="text" placeholder="Message" />
+    <Form.Control rows={5} as="textarea" type="text" placeholder="Message" />
   </Form.Group>
   <Button>Submit</Button>
 </Form>
